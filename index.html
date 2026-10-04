@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrimeNest Realty | Buy, Rent & Invest in Property</title>
+  <meta name="description" content="Buy houses and land, rent apartments, offices and shops. Browse verified listings and pay securely online.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#home"><i class="bi bi-house-heart-fill me-2"></i>PrimeNest</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="bi bi-list text-white fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#listings">Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-accent" href="#contact">List Your Property</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero d-flex align-items-center">
+  <div class="container position-relative">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9">
+        <span class="badge badge-hero mb-3">Houses • Land • Apartments • Commercial</span>
+        <h1 class="display-4 fw-bold text-white mb-3">Find the Property That Fits Your Life</h1>
+        <p class="lead text-white-50 mb-4">Buy, rent or invest. Browse verified listings and pay securely online.</p>
+      </div>
+    </div>
+    <form id="heroSearch" class="search-box shadow-lg">
+      <div class="btn-group w-100 mb-3" role="group" aria-label="Listing type">
+        <input type="radio" class="btn-check" name="heroType" id="tAll" value="all" checked>
+        <label class="btn btn-outline-primary" for="tAll">All</label>
+        <input type="radio" class="btn-check" name="heroType" id="tSale" value="sale">
+        <label class="btn btn-outline-primary" for="tSale">Buy</label>
+        <input type="radio" class="btn-check" name="heroType" id="tRent" value="rent">
+        <label class="btn btn-outline-primary" for="tRent">Rent</label>
+      </div>
+      <div class="row g-2">
+        <div class="col-md-4">
+          <input type="text" id="heroLocation" class="form-control form-control-lg" placeholder="City or location" aria-label="Location">
+        </div>
+        <div class="col-md-4">
+          <select id="heroCategory" class="form-select form-select-lg" aria-label="Property category">
+            <option value="all">All property types</option>
+            <option value="house">House</option>
+            <option value="land">Land</option>
+            <option value="apartment">Apartment</option>
+            <option value="commercial">Commercial</option>
+          </select>
+        </div>
+        <div class="col-md-4 d-grid">
+          <button class="btn btn-accent btn-lg" type="submit"><i class="bi bi-search me-2"></i>Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats py-4">
+  <div class="container">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-3"><h3>1,200+</h3><p>Properties Listed</p></div>
+      <div class="col-6 col-md-3"><h3>850+</h3><p>Happy Clients</p></div>
+      <div class="col-6 col-md-3"><h3>15+</h3><p>Years Experience</p></div>
+      <div class="col-6 col-md-3"><h3>40+</h3><p>Expert Agents</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section id="listings" class="py-5 section-pad">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="section-title">Featured Properties</h2>
+      <p class="text-muted">Homes, land and rentals handpicked by our team</p>
+    </div>
+
+    <div class="filter-bar mb-4">
+      <div class="row g-2 align-items-end">
+        <div class="col-6 col-lg-2">
+          <label class="form-label small fw-semibold" for="fType">Listing</label>
+          <select id="fType" class="form-select">
+            <option value="all">Sale &amp; Rent</option>
+            <option value="sale">For Sale</option>
+            <option value="rent">For Rent</option>
+          </select>
+        </div>
+        <div class="col-6 col-lg-2">
+          <label class="form-label small fw-semibold" for="fCategory">Type</label>
+          <select id="fCategory" class="form-select">
+            <option value="all">All types</option>
+            <option value="house">House</option>
+            <option value="land">Land</option>
+            <option value="apartment">Apartment</option>
+            <option value="commercial">Commercial</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-3">
+          <label class="form-label small fw-semibold" for="fLocation">Location</label>
+          <input type="text" id="fLocation" class="form-control" placeholder="e.g. Austin">
+        </div>
+        <div class="col-6 col-lg-2">
+          <label class="form-label small fw-semibold" for="fBeds">Bedrooms</label>
+          <select id="fBeds" class="form-select">
+            <option value="0">Any</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+        <div class="col-6 col-lg-2">
+          <label class="form-label small fw-semibold" for="fSort">Sort by</label>
+          <select id="fSort" class="form-select">
+            <option value="featured">Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-1 d-grid">
+          <button class="btn btn-outline-secondary" id="fReset" type="button" title="Reset filters"><i class="bi bi-arrow-counterclockwise"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-muted small" id="resultCount" aria-live="polite"></p>
+    <div class="row g-4" id="propertyGrid"></div>
+    <div class="text-center py-5 d-none" id="noResults">
+      <i class="bi bi-emoji-frown display-4 text-muted"></i>
+      <h5 class="mt-3">No properties match your search</h5>
+      <p class="text-muted">Try adjusting your filters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5 bg-light section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">What We Do</h2>
+      <p class="text-muted">Everything you need for your next property move</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-house-door"></i><h5>Buy a Home</h5><p>Verified houses with clear titles and honest pricing.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-map"></i><h5>Land Sales</h5><p>Residential, commercial and farm land with survey documents.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-building"></i><h5>Rentals</h5><p>Apartments, offices and shops on flexible lease terms.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="service-card"><i class="bi bi-graph-up-arrow"></i><h5>Property Management</h5><p>We manage your property so you earn without stress.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-5 section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">How It Works</h2>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-md-3"><div class="step">1</div><h6 class="mt-3">Browse</h6><p class="text-muted small">Search and filter listings.</p></div>
+      <div class="col-md-3"><div class="step">2</div><h6 class="mt-3">Inspect</h6><p class="text-muted small">Book a viewing with an agent.</p></div>
+      <div class="col-md-3"><div class="step">3</div><h6 class="mt-3">Pay Securely</h6><p class="text-muted small">Pay a deposit or full amount online.</p></div>
+      <div class="col-md-3"><div class="step">4</div><h6 class="mt-3">Move In</h6><p class="text-muted small">We handle documents and handover.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5 bg-light section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=70" class="img-fluid rounded-4 shadow" alt="Real estate agent handing over keys" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title text-start">About PrimeNest Realty</h2>
+        <p class="text-muted">For over 15 years we have helped families, investors and businesses buy, sell and rent property with confidence. Every listing is physically verified and every transaction is documented.</p>
+        <ul class="list-unstyled check-list">
+          <li><i class="bi bi-check-circle-fill"></i> Verified listings and clean titles</li>
+          <li><i class="bi bi-check-circle-fill"></i> Transparent pricing, no hidden fees</li>
+          <li><i class="bi bi-check-circle-fill"></i> Secure online payments with receipts</li>
+          <li><i class="bi bi-check-circle-fill"></i> Dedicated agent from viewing to handover</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-5 section-pad">
+  <div class="container">
+    <div class="text-center mb-5"><h2 class="section-title">What Clients Say</h2></div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="testimonial"><div class="stars">★★★★★</div><p>"Found our family home in two weeks. The paperwork was handled perfectly."</p><strong>Sarah M.</strong><small class="d-block text-muted">Home buyer</small></div></div>
+      <div class="col-md-4"><div class="testimonial"><div class="stars">★★★★★</div><p>"I rented an apartment and paid the deposit online. Smooth and fast."</p><strong>David O.</strong><small class="d-block text-muted">Tenant</small></div></div>
+      <div class="col-md-4"><div class="testimonial"><div class="stars">★★★★★</div><p>"Great advice on land investment. The survey documents were all in order."</p><strong>Amina K.</strong><small class="d-block text-muted">Land investor</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-5 bg-light section-pad">
+  <div class="container" style="max-width:800px">
+    <div class="text-center mb-4"><h2 class="section-title">Frequently Asked Questions</h2></div>
+    <div class="accordion" id="faqAcc">
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">How do I pay for a property?</button></h3>
+        <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Click "Pay Now" on any listing to pay a reservation deposit, rent, or the full price by card, bank transfer or mobile money.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">Is the reservation deposit refundable?</button></h3>
+        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Yes, if the property fails verification or the seller withdraws. Otherwise it is credited toward your purchase or rent.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">Can I inspect before paying?</button></h3>
+        <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Absolutely. Use "Book Viewing" on any listing and an agent will contact you.</div></div></div>
+      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4">Can I list my own property?</button></h3>
+        <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Yes. Send us the details through the contact form and select "List my property".</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="text-muted">Questions, viewings or want to list a property? We reply within 24 hours.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="contact-info h-100">
+          <h5 class="mb-4">Contact Information</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> 123 Market Street, Austin, TX 78701</p>
+          <p><i class="bi bi-telephone-fill"></i> <a href="tel:+15125550123">+1 (512) 555-0123</a></p>
+          <p><i class="bi bi-envelope-fill"></i> <a href="mailto:info@primenest.example">info@primenest.example</a></p>
+          <p><i class="bi bi-clock-fill"></i> Mon–Sat: 8am – 6pm</p>
+          <div class="ratio ratio-16x9 rounded overflow-hidden mt-4">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-97.76%2C30.25%2C-97.72%2C30.28&amp;layer=mapnik" title="Office location map" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <form id="contactForm" class="card border-0 shadow-sm p-4" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="cName">Full name</label><input id="cName" class="form-control" required><div class="invalid-feedback">Please enter your name.</div></div>
+            <div class="col-md-6"><label class="form-label" for="cEmail">Email</label><input id="cEmail" type="email" class="form-control" required><div class="invalid-feedback">Enter a valid email.</div></div>
+            <div class="col-md-6"><label class="form-label" for="cPhone">Phone</label><input id="cPhone" type="tel" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label" for="cSubject">I want to</label>
+              <select id="cSubject" class="form-select">
+                <option>Buy a property</option><option>Rent a property</option><option>Book a viewing</option><option>List my property</option><option>Other</option>
+              </select></div>
+            <div class="col-12"><label class="form-label" for="cMsg">Message</label><textarea id="cMsg" rows="4" class="form-control" required></textarea><div class="invalid-feedback">Please write a message.</div></div>
+            <div class="col-12"><button class="btn btn-primary btn-lg px-5" type="submit">Send Message</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5 class="text-white"><i class="bi bi-house-heart-fill me-2"></i>PrimeNest</h5>
+        <p>Your trusted partner for buying, selling and renting property.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2"><h6 class="text-white">Explore</h6><ul class="list-unstyled"><li><a href="#listings">Properties</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div class="col-6 col-lg-3"><h6 class="text-white">Property Types</h6><ul class="list-unstyled"><li>Houses</li><li>Land</li><li>Apartments</li><li>Commercial</li></ul></div>
+      <div class="col-lg-3"><h6 class="text-white">Newsletter</h6>
+        <form id="newsForm" class="input-group"><input type="email" class="form-control" placeholder="Your email" aria-label="Email" required><button class="btn btn-accent" aria-label="Subscribe"><i class="bi bi-send"></i></button></form>
+      </div>
+    </div>
+    <hr class="border-secondary mt-4">
+    <p class="text-center small mb-0">&copy; <span id="year"></span> PrimeNest Realty. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/15125550123" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+<!-- PROPERTY DETAILS MODAL -->
+<div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title" id="detailTitle"></h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body" id="detailBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- VIEWING MODAL -->
+<div class="modal fade" id="viewingModal" tabindex="-1" aria-labelledby="viewingTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-content" id="viewingForm" novalidate>
+      <div class="modal-header"><h5 class="modal-title" id="viewingTitle">Book a Viewing</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">
+        <p class="text-muted small" id="viewingProp"></p>
+        <div class="mb-3"><label class="form-label" for="vName">Full name</label><input id="vName" class="form-control" required><div class="invalid-feedback">Required.</div></div>
+        <div class="mb-3"><label class="form-label" for="vEmail">Email</label><input id="vEmail" type="email" class="form-control" required><div class="invalid-feedback">Enter a valid email.</div></div>
+        <div class="mb-3"><label class="form-label" for="vPhone">Phone</label><input id="vPhone" type="tel" class="form-control" required><div class="invalid-feedback">Required.</div></div>
+        <div class="mb-3"><label class="form-label" for="vDate">Preferred date</label><input id="vDate" type="date" class="form-control" required><div class="invalid-feedback">Pick a future date.</div></div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-primary w-100" type="submit">Request Viewing</button></div>
+    </form>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title" id="payTitle"><i class="bi bi-shield-lock-fill text-success me-2"></i>Secure Checkout</h5><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body">
+        <div id="payStep1">
+          <div class="row g-4">
+            <div class="col-md-5">
+              <div class="order-summary">
+                <img id="payImg" class="img-fluid rounded mb-3" alt="">
+                <h6 id="payName"></h6>
+                <p class="small text-muted mb-3" id="payLoc"></p>
+                <label class="form-label small fw-semibold" for="payOption">Payment for</label>
+                <select id="payOption" class="form-select mb-3"></select>
+                <div class="d-flex justify-content-between"><span>Amount</span><span id="payAmount"></span></div>
+                <div class="d-flex justify-content-between"><span>Processing fee (1.5%)</span><span id="payFee"></span></div>
+                <hr>
+                <div class="d-flex justify-content-between fw-bold fs-5"><span>Total</span><span id="payTotal"></span></div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <form id="payForm" novalidate>
+                <h6 class="mb-3">Your details</h6>
+                <div class="row g-2 mb-3">
+                  <div class="col-sm-6"><input id="pName" class="form-control" placeholder="Full name" aria-label="Full name" autocomplete="name" required><div class="invalid-feedback">Required.</div></div>
+                  <div class="col-sm-6"><input id="pEmail" type="email" class="form-control" placeholder="Email" aria-label="Email" autocomplete="email" required><div class="invalid-feedback">Valid email required.</div></div>
+                </div>
+                <h6 class="mb-2">Payment method</h6>
+                <div class="btn-group w-100 mb-3" role="group">
+                  <input type="radio" class="btn-check" name="method" id="mCard" value="card" checked><label class="btn btn-outline-primary" for="mCard"><i class="bi bi-credit-card"></i> Card</label>
+                  <input type="radio" class="btn-check" name="method" id="mBank" value="bank"><label class="btn btn-outline-primary" for="mBank"><i class="bi bi-bank"></i> Bank</label>
+                  <input type="radio" class="btn-check" name="method" id="mMobile" value="mobile"><label class="btn btn-outline-primary" for="mMobile"><i class="bi bi-phone"></i> Mobile</label>
+                </div>
+
+                <div id="cardFields">
+                  <div class="mb-2"><input id="cardNum" class="form-control" inputmode="numeric" placeholder="Card number" aria-label="Card number" autocomplete="cc-number" maxlength="23"><div class="invalid-feedback">Invalid card number.</div></div>
+                  <div class="row g-2">
+                    <div class="col-6"><input id="cardExp" class="form-control" inputmode="numeric" placeholder="MM/YY" aria-label="Expiry" autocomplete="cc-exp" maxlength="5"><div class="invalid-feedback">Invalid expiry.</div></div>
+                    <div class="col-6"><input id="cardCvc" class="form-control" inputmode="numeric" placeholder="CVC" aria-label="CVC" autocomplete="cc-csc" maxlength="4"><div class="invalid-feedback">Invalid CVC.</div></div>
+                  </div>
+                </div>
+                <div id="bankFields" class="d-none alert alert-info small">
+                  Transfer the total to:<br><strong>Bank:</strong> First Trust Bank<br><strong>Account name:</strong> PrimeNest Realty Ltd<br><strong>Account no:</strong> 0123456789<br>Use your reference code after submitting. Your reservation is confirmed once payment is received.
+                </div>
+                <div id="mobileFields" class="d-none">
+                  <input id="mobileNum" type="tel" class="form-control" placeholder="Mobile money number" aria-label="Mobile money number"><div class="invalid-feedback">Enter a valid number.</div>
+                  <div class="form-text">You will receive a prompt on your phone to approve the payment.</div>
+                </div>
+
+                <button class="btn btn-accent btn-lg w-100 mt-4" type="submit" id="payBtn"><i class="bi bi-lock-fill me-2"></i>Pay <span id="payBtnAmt"></span></button>
+                <p class="small text-muted text-center mt-2 mb-0"><i class="bi bi-shield-check"></i> 256-bit encrypted. Card data is never stored.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="payStep2" class="text-center py-4 d-none">
+          <i class="bi bi-check-circle-fill text-success display-1"></i>
+          <h4 class="mt-3" id="payDoneTitle">Payment Received</h4>
+          <p class="text-muted" id="payDoneMsg"></p>
+          <div class="receipt mx-auto text-start" id="receipt"></div>
+          <button class="btn btn-outline-primary mt-3 me-2" onclick="window.print()"><i class="bi bi-printer"></i> Print receipt</button>
+          <button class="btn btn-primary mt-3" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 start-0 p-3">
+  <div id="appToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite">
+    <div class="d-flex"><div class="toast-body" id="toastMsg"></div><button class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
